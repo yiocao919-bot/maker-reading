@@ -36,6 +36,7 @@
 - 标签 pill：`padding:4px 12px; border-radius:14px; font-size:11px; font-weight:600; color:#fff`，背景用对应色
 - 多列布局：`display:flex; flex-wrap:wrap; gap:8px`，子项 `flex:1 1 200px; min-width:0`
 - 封面图：宽 110px，圆角 8px，阴影 `0 4px 14px rgba(139,92,246,0.3)`
+- 作者头像：宽 90px 圆形，白边 3px，紫色调阴影；搜到合适公开照才放，搜不到整块删掉，不要用同名同姓的其他人照片
 
 ## HTML renderer 硬约束
 
@@ -76,6 +77,10 @@
         <span style="padding:4px 12px;background:#F97316;color:#fff;border-radius:14px;font-size:11px;font-weight:600;">标签2</span>
         <span style="padding:4px 12px;background:#10B981;color:#fff;border-radius:14px;font-size:11px;font-weight:600;">标签3</span>
       </div>
+    </div>
+    <!-- 作者头像：搜到作者本人公开照才放，搜不到整块删除。90px圆形白边 -->
+    <div style="flex:0 0 auto;width:90px;flex-shrink:0;">
+      <img src="作者头像URL" alt="作者照片" style="width:90px;height:90px;border-radius:50%;object-fit:cover;border:3px solid #fff;box-shadow:0 4px 12px rgba(139,92,246,0.3);display:block;">
     </div>
   </div>
 
